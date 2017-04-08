@@ -1,0 +1,35 @@
+<aside class="col-sm-4 sidebar lp30">
+	
+  <div class="sidebox widget">
+    <h3 class="widget-title section-title">Custom Text</h3>
+      <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Aenean lacinia bibendum nulla sed consectetur. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+  </div>
+
+  <div class="sidebox widget">
+    <h3 class="widget-title section-title">Recent Post</h3>
+      <ul class="recent-list">
+        {{#get "posts" limit="5"}}
+          {{#foreach posts}}
+            <li><a href="{{url}}">{{title}}</a></li>
+          {{/foreach}}
+        {{/get}}
+      </ul>
+  </div>
+    
+  <div class="sidebox widget">
+    <h3 class="widget-title section-title">Tags</h3>
+      <div class="tag-list">
+        {{#get "tags" limit="all" order="name asc"}}
+          {{#foreach tags}}
+            <a href="/tag/{{slug}}">{{name}}</a>
+          {{/foreach}}
+        {{/get}}
+      </div>
+  </div>
+
+    <div class="sidebox widget">
+    <h3 class="widget-title section-title">Instagram</h3>
+    <div class="instagram-widget "></div>
+  </div>
+
+</aside>

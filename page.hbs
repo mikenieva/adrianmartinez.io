@@ -1,0 +1,33 @@
+{{!< default}}
+{{! The tag above means - insert everything in this file into the {body} of the default.hbs template }}
+{{! The main content area on the homepage }}
+    {{! The tag below includes the post loop - partials/loop.hbs }}
+    {{#post}}
+    <article class="{{post_class}}">
+        {{#if image}}
+ <img class="image-featured" src="{{image}}" alt="" />
+ {{/if}}
+  <time class="entry-date" datetime="{{date published_at timeago="true"}}"><h2>{{date published_at timeago="true"}}</h2></time>
+<h1>{{title}}</h1>
+                           
+                           {{content}}
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+function disqus_comment(){
+   {{> config}}
+    var disqus_identifier = '{{post.id}}';
+ 
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    }
+    disqus_comment(); 
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</article>
+{{/post}}
+
+ {{> "sidebar"}}

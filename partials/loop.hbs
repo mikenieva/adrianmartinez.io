@@ -1,0 +1,17 @@
+{{#foreach posts}}
+                <article class="style grid post-featured-image">
+                  <span class="image">
+                    {{#if image}}
+                    <img src="{{image}}" alt="" />
+                    {{else}}
+                    <img src="{{asset "image/post_background.png"}}" alt="" />
+                    {{/if}}
+                  </span>
+                  <a href="{{url}}">
+                    <h2>{{title}}</h2>
+                    <div class="content">
+                      {{content words="7"}}
+                    </div>
+                  </a>
+                </article>
+                {{/foreach}}

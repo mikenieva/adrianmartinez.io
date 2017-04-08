@@ -1,0 +1,95 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    {{! Document Settings }}
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    {{! Page Meta }}
+    <title>{{meta_title}}</title>
+    <meta name="description" content="{{meta_description}}" />
+    <meta http-equiv="Content-Type" content="application/xhtml+xml">
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="{{asset "favicon.ico"}}">
+    <!--[if lte IE 8]><script src="{{asset "js/ie/html5shiv.js" }}"></script><![endif]-->
+    <link rel="stylesheet" href="{{asset "css/main.css"}}" />
+    <!--[if lte IE 9]><link rel="stylesheet" href="{{asset "css/ie9.css" }}"" /><![endif]-->
+    <!--[if lte IE 8]><link rel="stylesheet" href="{{asset "css/ie8.css"}}"" /><![endif]-->
+     <style>
+      .loading {background-image: url('{{asset "image/ripple.gif"}}'); }
+    </style>
+    {{ghost_head}}
+  </head>
+  <body>
+    <!-- Wrapper -->
+      <div id="wrapper">
+
+        <!-- Header -->
+          <header id="header">
+            <div class="inner header-inner">
+
+              <!-- Nav -->
+                <nav>
+                  <ul>
+                    <li><a href="#menu">Menu</a></li>
+                  </ul>
+                </nav>
+
+            </div>
+            <div class="clearfix"></div>
+          </header>
+
+        <!-- Menu -->
+          <nav id="menu">
+            <h2>Menu</h2>
+           {{navigation}}
+          </nav>
+
+        <!-- Main -->
+          <div id="main">
+            <div class="inner">
+              <header class="header-section">
+                <section class="header-left">
+                <h1>Hi, my name is <a href="{{@blog.url}}">Erica</a><br />
+                I live in California.</h1>
+              </section><section class="header-right">
+                 <ul class="icons footer-icons">
+                  <li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+                  <li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+                  <li><a href="{{@blog.url}}" class="icon fa-home"><span class="label">Instagram</span></a></li>
+                </ul>
+              </section>
+              </header>
+           {{{body}}}
+           
+
+            </div>
+              <div class="clearfix"></div>
+          </div>
+
+        <!-- Footer -->
+          <footer id="footer">
+            <div class="inner">
+              <section>
+              <ul class="copyright">
+                <li>&copy; 2016. All rights reserved</li><li>Designed: <a href="http://malvouz.com">Malvouz</a></li>
+              </ul>
+              </section>
+            </div>
+          </footer>
+
+      </div>
+      {{ghost_foot}}
+    <!-- Scripts -->
+      <script src="{{asset "js/jquery.min.js"}}"></script>
+      <script src="https://npmcdn.com/imagesloaded@4.1/imagesloaded.pkgd.min.js"></script>
+      <script src="https://unpkg.com/masonry-layout@4.1/dist/masonry.pkgd.min.js"></script>
+      <script src="{{asset "js/skel.min.js" }}"></script>
+      <script src="{{asset "js/util.js"}}"></script>
+      <!--[if lte IE 8]><script src="{{asset "js/ie/respond.min.js"}}""></script><![endif]-->
+      <script src="{{asset "js/main.js" }}"></script>
+      
+  </body>
+</html>
