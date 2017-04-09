@@ -25,7 +25,7 @@ type: "GET",
 dataType: "jsonp",
 cache: false,
 // Change "self" with your ID
-url: "https://api.instagram.com/v1/users/self/media/recent/?access_token=2301975641.c85e772.049f3b97326b4d3ea7a1bb976066d419&count=10",
+url: "https://api.instagram.com/v1/users/d86883a194da43a08b75f1f6bf98f5da/media/recent/?access_token=2301975641.c85e772.049f3b97326b4d3ea7a1bb976066d419&count=10",
 // Result JSON above
 // {"meta": {"code": 200}, "data": {"username": "malvouz", "bio": "", "website": "", "profile_picture": "https://scontent.cdninstagram.com/t51.2885-19/11906329_960233084022564_1448528159_a.jpg", "full_name": "", "counts": {"media": 0, "followed_by": 2, "follows": 7}, "id": "2301975641"}}
 success: function(response) {
